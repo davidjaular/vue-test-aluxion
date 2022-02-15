@@ -5,11 +5,12 @@ const DetailsContent = styled.div`
   width: 50%;
   background-color: #091e42;
   max-width: 751px;
+`;
+
+export const NavDetail = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 `;
-
-const 
 
 export default DetailsContent;

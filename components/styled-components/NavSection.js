@@ -14,7 +14,7 @@ const NavSection = styled.nav`
   }
 `;
 
-const NavItems = styled.div`
+export const NavItems = styled.div`
   & > span {
     font-size: 14px;
     line-height: 17px;
@@ -30,4 +30,4 @@ const NavItems = styled.div`
   justify-content: space-between;
 `;
 
-export { NavItems, NavSection };
+export default NavSection;

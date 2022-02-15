@@ -5,7 +5,8 @@ const TeamContent = styled.div`
   width: 100%;
   padding-top: 108px;
 `;
-const Titles = styled.div`
+
+export const Titles = styled.div`
   & > span {
     color: #42526e;
     font-size: 16px;
@@ -20,7 +21,7 @@ const Titles = styled.div`
   padding: 0 68px;
 `;
 
-const ModalContent = styled.div`
+export const ModalContent = styled.div`
   display: flex;
   flex-direction: column;
 
@@ -46,7 +47,7 @@ const ModalContent = styled.div`
   }
 `;
 
-const Buttons = styled.div`
+export const Buttons = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -66,7 +67,7 @@ const Buttons = styled.div`
   }
 `;
 
-const AluxionerSection = styled.div`
+export const AluxionerSection = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-column-gap: 19.7px;
@@ -87,7 +88,7 @@ const AluxionerSection = styled.div`
   }
 `;
 
-const AluxionerCard = styled.div`
+export const AluxionerCard = styled.div`
   display: flex;
   flex-direction: column;
   cursor: pointer;
@@ -119,11 +120,4 @@ const AluxionerCard = styled.div`
   }
 `;
 
-export {
-  TeamContent,
-  Titles,
-  AluxionerCard,
-  AluxionerSection,
-  ModalContent,
-  Buttons,
-};
+export default TeamContent;

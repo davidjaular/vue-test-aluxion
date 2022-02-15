@@ -31,8 +31,7 @@
 </template>
 
 <script>
-  import {
-    SearchContent,
+  import SearchContent, {
     TitleText,
     Search,
   } from '../styled-components/SearchSection';

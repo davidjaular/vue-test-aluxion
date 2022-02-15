@@ -25,7 +25,7 @@
 </template>
 
 <script>
-  import { NavSection, NavItems } from '../styled-components/NavSection';
+  import NavSection, { NavItems } from '../styled-components/NavSection';
 
   export default {
     name: 'NavBar',

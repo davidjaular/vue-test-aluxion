@@ -9,7 +9,14 @@
         v-for="aluxioner in aluxioners"
         :key="aluxioner.id"
         @click="
-          aluxioner.id < 7 ? modalShow(aluxioner.name, aluxioner.id) : undefined
+          aluxioner.id < 7
+            ? modalShow(
+                aluxioner.name,
+                aluxioner.id,
+                aluxioner.stopHome,
+                aluxioner.stopWork,
+              )
+            : undefined
         "
       >
         <img :src="aluxioner.img" />
@@ -25,10 +32,10 @@
         <span>Hey {{ name }},</span>
         <span>¿Cuál es tu rumbo, aluxioner?</span>
         <buttons>
-          <NuxtLink :to="`/search/${id}?data=home`">
+          <NuxtLink :to="`/search/${id}?stopId=${stopHome}`">
             <button>casa</button>
           </NuxtLink>
-          <NuxtLink :to="`/search/${id}?data=work`">
+          <NuxtLink :to="`/search/${id}?stopId=${stopWork}`">
             <button>aluxion</button>
           </NuxtLink>
         </buttons>
@@ -38,8 +45,7 @@
 </template>
 
 <script lang="ts">
-  import {
-    TeamContent,
+  import TeamContent, {
     Titles,
     AluxionerCard,
     AluxionerSection,
@@ -66,17 +72,17 @@
         isModalVisible: false,
         name: 'Aluxioner',
         id: 0,
+        stopHome: 0,
+        stopWork: 0,
       };
     },
     methods: {
-      getImgUrl(pet: string) {
-        // const images = require.context('@/assets/', false, /\.png$/)
-        return require(pet);
-      },
-      modalShow(name: string, id: number) {
+      modalShow(name: string, id: number, home: number, work: number): any {
         this.isModalVisible = !this.isModalVisible;
         this.name = name;
         this.id = id;
+        this.stopHome = home;
+        this.stopWork = work;
       },
     },
   };

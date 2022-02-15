@@ -21,7 +21,7 @@ const SearchContent = styled.section`
   }
 `;
 
-const TitleText = styled.div`
+export const TitleText = styled.div`
   & > span {
     color: white;
     font-weight: bold;
@@ -38,7 +38,7 @@ const TitleText = styled.div`
 
 const searchProps = { searchPage: Boolean };
 
-const Search = styled('div', searchProps)`
+export const Search = styled('div', searchProps)`
   padding: ${(props) => (props.searchPage ? '0' : '15px 68px 0 0')};
   flex: 1;
   display: flex;
@@ -99,4 +99,4 @@ const Search = styled('div', searchProps)`
   }
 `;
 
-export { SearchContent, TitleText, Search };
+export default SearchContent;
