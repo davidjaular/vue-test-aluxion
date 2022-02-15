@@ -17,11 +17,5 @@
       DetailNavBar,
       LinesSection,
     },
-    data() {
-      return {
-        route: this.$route.query,
-        stopId: undefined,
-      };
-    },
   };
 </script>

@@ -99,8 +99,17 @@
         stop: {},
       };
     },
-    mounted() {
-      this.fetchLineDetail();
+    watch: {
+      async $route() {
+        this.stop = {};
+        const data = await this.fetchLineDetail();
+        this.stop = data;
+        this.stopId = this.$route.query?.stopId;
+      },
+    },
+    async mounted() {
+      const data = await this.fetchLineDetail();
+      this.stop = data;
     },
     methods: {
       selectBus(busId) {
@@ -115,7 +124,7 @@
           { headers: { accessToken: token } },
         );
 
-        this.stop = data[0].stops[0];
+        return data[0].stops[0];
       },
     },
   };
