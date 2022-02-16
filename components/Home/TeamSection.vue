@@ -44,7 +44,7 @@
   </team-content>
 </template>
 
-<script lang="ts">
+<script>
   import TeamContent, {
     Titles,
     AluxionerCard,
@@ -77,7 +77,7 @@
       };
     },
     methods: {
-      modalShow(name: string, id: number, home: number, work: number): any {
+      modalShow(name, id, home, work) {
         this.isModalVisible = !this.isModalVisible;
         this.name = name;
         this.id = id;
